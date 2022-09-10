@@ -16,7 +16,8 @@ config :infinite_scroll, InfiniteScrollWeb.Endpoint,
   secret_key_base: "/NZem8VvhXOXCAjOlY/2Ep3HRlftFeEa2BqgNQ2xoyBoe8jxabu8oqo3/YE1pyne",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support

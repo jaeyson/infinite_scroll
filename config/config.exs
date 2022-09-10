@@ -14,6 +14,17 @@ config :infinite_scroll, InfiniteScrollWeb.Endpoint,
   pubsub_server: InfiniteScroll.PubSub,
   live_view: [signing_salt: "+n+x+NPt"]
 
+config :tailwind,
+  version: "3.1.6",
+  default: [
+    args: ~w(
+      --config=tailwind.config.js
+      --input=css/app.css
+      --output=../priv/static/assets/app.css
+    ),
+    cd: Path.expand("../assets", __DIR__)
+  ]
+
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.14.29",
