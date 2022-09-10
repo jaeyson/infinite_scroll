@@ -17,7 +17,8 @@ defmodule InfiniteScrollWeb.Router do
   scope "/", InfiniteScrollWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", HomeLive.Index, :index
+    # get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
